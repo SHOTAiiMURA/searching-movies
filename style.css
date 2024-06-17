@@ -40,3 +40,17 @@ html, body{
     outline: none;
     font-size: 16px; 
 }
+
+#searchBtn{
+    padding: 12px;
+    background: linear-gradient(120deg, rgb(245,132,66),rgb(120,66,245));
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px
+    
+}
+#searchBtn:hover{
+    background: linear-gradient(120deg, rgb(248, 104, 20),rgb(95, 34, 239)5);
+}
