@@ -4,7 +4,7 @@ from tkinter import simpledialog, messagebox
 
 api_key = "ee2b37bc"
 
-def search_movies():
+def searchMovies():
     search_query = simpledialog.askstring("Input", "Enter movie title:")
     if not search_query or search_query.strip() == "":
         messagebox.showerror("Error", "Enter movie title")
@@ -21,7 +21,7 @@ def search_movies():
     except Exception as e:
         messagebox.showerror("Error", str(e))
 
-def display_movies(movies):
+def displayMovies(movies):
     movie_result_container = simpledialog.querySelector('#movieResult')
     movie_result_container.innerHTML = ''
 
