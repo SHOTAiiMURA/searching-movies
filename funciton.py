@@ -10,7 +10,7 @@ def search_movies():
         messagebox.showerror("Error", "Enter movie title")
         return
     try:
-        api_url = f"https://www.omdbapi.com/?apikey={api_key}&s={search_query}"
+        api_url = f"https://www.omdbapi.com/?apikey= {api_key} &s= {search_query}"
         response = requests.get(api_url)
         data = json.loads(response.text)
         if data["Response"] == "True":
@@ -21,4 +21,20 @@ def search_movies():
     except Exception as e:
         messagebox.showerror("Error", str(e))
 
-\
+def display_movies(movies):
+    movie_result_container = simpledialog.querySelector('#movieResult')
+    movie_result_container.innerHTML = ''
+
+    for movie in movies:
+        movie_element = simpledialog.createElement('div')
+        movie_element.innerHTML = f'''
+        <div class="movieCard">
+            <div id="movieImgBlock">
+                <img src="{movie['Poster']}"/>
+            </div>
+            <h2>{movie['Title']}</h2>
+            <p>{movie['Year']}</p>
+        </div>
+        '''
+        movie_result_container.appendChild(movie_element)
+    
