@@ -20,25 +20,26 @@ function searchMovies(){
                 alert('No movies found');
             }
         })
-        .catch(erroro => {
+        .catch(error => {
             console.log('Error', error);
         })
 }
 
 function displayMovies(movies){
-    const moviesResultContainer = document.getElementById('movies-container');
+    const moviesResultContainer = document.getElementById('#movieResult');
     moviesResultContainer.innerHTML = ' ';
 
 
-    movies.fetch(movie => {
+    movies.forEach(movie => {
         const movieElement = document.createElement('div');
         movieElement.innerHTML = 
             `
                 <div class="movieCard">
                     <div id="movieImgBlock">
-                    <img src="${movie.Poster}"/>
+                        <img src="${movie.Poster}"/>
                     </div>
-                    <h2>${movie.Title}</h2>
+
+                     <h2>${movie.Title}</h2>
                     <p>${movie.Year}</p>
                 </div>
             `;
