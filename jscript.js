@@ -8,7 +8,7 @@ function searchMovies(){
         return;
     }
 
-    const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(searchQuery)}`;
+    const apiUrl = `https://www.omdbapi.com/?i=tt3896198&apikey=${apiKey}&s=${encodeURIComponent(searchQuery)}`;
 
     fetch(apiUrl)
         .then(response => response.json())
