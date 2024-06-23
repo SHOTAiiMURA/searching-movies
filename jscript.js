@@ -10,7 +10,7 @@ function searchMovies(){
 
     const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(searchQuery)}`;
 
-    fetch(apiURL)
+    fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             if(data.response === "True"){
@@ -39,7 +39,7 @@ function displayMovies(movies){
                         <img src="${movie.Poster}"/>
                     </div>
 
-                     <h2>${movie.Title}</h2>
+                    <h2>${movie.Title}</h2>
                     <p>${movie.Year}</p>
                 </div>
             `;
