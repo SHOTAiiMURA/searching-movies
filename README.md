@@ -1,4 +1,5 @@
 # searching-movies
 
-https://github.com/SHOTAiiMURA/searching-movies/assets/91776514/dfcb09ee-d220-4844-93b3-da1b6b5af6cd
+https://github.com/SHOTAiiMURA/searching-movies/assets/91776514/3cd81421-0f16-47f9-9f32-8462ef59e5a0
+
 
